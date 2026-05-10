@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embedded Protocols — Documentation</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8f9fa;
+      color: #202124;
+    }
+    header {
+      background: #1565c0;
+      color: white;
+      padding: 24px 32px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+    header p {
+      margin: 4px 0 0;
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+    main {
+      max-width: 720px;
+      margin: 32px auto;
+      padding: 0 16px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+      overflow: hidden;
+    }
+    .card + .card {
+      margin-top: 24px;
+    }
+    .card-title {
+      padding: 12px 24px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #5f6368;
+      border-bottom: 1px solid #e8eaed;
+    }
+    .latest-link {
+      display: flex;
+      align-items: center;
+      padding: 20px 24px;
+      text-decoration: none;
+      color: #1a73e8;
+      font-size: 1.05rem;
+      font-weight: 500;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      transition: background 0.15s;
+    }
+    .latest-link:hover { background: #f1f8ff; }
+    .badge {
+      margin-left: 12px;
+      padding: 2px 10px;
+      background: #1565c0;
+      color: white;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: 12px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .version-item a {
+      display: block;
+      padding: 14px 24px;
+      text-decoration: none;
+      color: #1a73e8;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #f1f3f4;
+      transition: background 0.15s;
+    }
+    .version-item:last-child a { border-bottom: none; }
+    .version-item a:hover { background: #f1f8ff; }
+    footer {
+      text-align: center;
+      padding: 32px 16px;
+      font-size: 0.8rem;
+      color: #9aa0a6;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0d1117; color: #e6edf3; }
+      header { background: #0d1b4b; box-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+      .card { background: #161b22; box-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+      .card-title { color: #8b949e; border-bottom-color: #21262d; }
+      .latest-link { color: #58a6ff; }
+      .latest-link:hover { background: #1f2d3d; }
+      .badge { background: #1f3a6e; }
+      .version-item a { color: #58a6ff; border-bottom-color: #21262d; }
+      .version-item a:hover { background: #1f2d3d; }
+      footer { color: #484f58; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Embedded Protocols</h1>
+    <p>Protocol Buffer documentation</p>
+  </header>
+  <main>
+    <div class="card">
+      <div class="card-title">Latest</div>
+      <a href="latest/" class="latest-link">
+        v1.0.0<span class="badge">latest</span>
+      </a>
+    </div>
+    <div class="card">
+      <div class="card-title">All versions</div>
+      <ul style="margin:0;padding:0;list-style:none;">
+        <li class="version-item"><a href="v1.0.0/">v1.0.0</a></li>
+      </ul>
+    </div>
+  </main>
+  <footer>© 2026 Atilova.</footer>
+</body>
+</html>

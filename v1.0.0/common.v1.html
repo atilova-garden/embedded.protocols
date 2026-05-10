@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Embedded Protocols</title>
+    <link rel="stylesheet" href="static/mystyles.css" />
+    <script src="static/fontawesome.js"></script>
+    <script src="static/lunr.js"></script>
+    <script src="static/theme.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="level pt-6 mb-5 pb-2 bottom-border">
+        <div class="level-left">
+          <p class="level-item has-text-centered is-size-3 has-text-weight-medium">
+            <a class="link is-info" href="index.html">
+              Embedded Protocols
+            </a>
+          </p>
+        </div>
+
+        <div class="level-right">
+          
+          <form action="search.html" class="mr-2 has-text-centered">
+            <input type="text" name="query" class="input mr-3 navbar-search-query-input" placeholder="Search">
+            <input type="submit" class="button is-primary mr-5" value="Search" />
+          </form>
+          
+
+          <p class="level-item has-text-centered is-size-5">
+            <a href="https://github.com/atilova-garden/embedded.protocols" class="link is-info mr-5" target="_blank">
+              
+              <span class="icon">
+                <i class="fa-brands fa-github"></i>
+              </span>
+              
+              <span>Source</span>
+            </a>
+
+            <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite" type="button">
+              <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                <mask class="moon" id="moon-mask">
+                  <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                  <circle cx="24" cy="10" r="6" fill="black" />
+                </mask>
+                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                <g class="sun-beams" stroke="currentColor">
+                  <line x1="12" y1="1" x2="12" y2="3" />
+                  <line x1="12" y1="21" x2="12" y2="23" />
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                  <line x1="1" y1="12" x2="3" y2="12" />
+                  <line x1="21" y1="12" x2="23" y2="12" />
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </g>
+              </svg>
+            </button>
+          </p>
+        </div>
+      </nav>
+    </div>
+
+    <div id="main-content" class="container mb-6">
+  <p class="mb-2">
+    <a style="font-size: 0.9em" href="index.html">← Back to packages</a>
+  </p>
+  <h3 class="title is-3">
+    
+    Package <code>common.v1</code>
+    
+  </h3>
+
+  <div class="block">
+    
+
+    
+      
+      <p>
+        <a href="#message-common.v1.IntId">
+          <span class="tag" style="min-width: 6em">Message</span>
+          <code>IntId</code> 
+        </a>
+      </p>
+      
+    
+      
+      <p>
+        <a href="#message-common.v1.UUID">
+          <span class="tag" style="min-width: 6em">Message</span>
+          <code>UUID</code> 
+        </a>
+      </p>
+      
+    
+      
+      <p>
+        <a href="#message-common.v1.Timestamp">
+          <span class="tag" style="min-width: 6em">Message</span>
+          <code>Timestamp</code> 
+        </a>
+      </p>
+      
+    
+      
+      <p>
+        <a href="#message-common.v1.Duration">
+          <span class="tag" style="min-width: 6em">Message</span>
+          <code>Duration</code> 
+        </a>
+      </p>
+      
+    
+      
+      <p>
+        <a href="#message-common.v1.ErrorCode">
+          <span class="tag" style="min-width: 6em">Message</span>
+          <code>ErrorCode</code> 
+        </a>
+      </p>
+      
+    
+
+    
+  </div>
+
+  <div class="block">
+      <p>Package common.v1 provides fundamental scalar types shared across<br />
+all service definitions.</p>
+  </div>
+
+  
+
+  
+
+    <h3 class="title is-3">
+      Messages
+    </h3>
+
+    
+      
+      <div class="block">
+        
+
+<h4 class="title is-4 type-heading" id="message-common.v1.IntId">
+  <span>
+    <a href="#message-common.v1.IntId" title="common.v1.IntId">message IntId</a>
+  
+  </span>
+  
+    <a class="type-source-link" href="https://github.com/atilova-garden/embedded.protocols/blob/master/proto/common/v1/base.proto#L8">common/v1/base.proto</a>
+  
+</h4>
+
+<div class="block content">
+  <p>IntId is a lightweight 32-bit unsigned integer identifier.</p>
+</div>
+
+<table class="table is-fullwidth is-hoverable is-bordered">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>1</td>
+      <td>
+        value
+      </td>
+      <td>
+        <code title="uint32">
+          
+          <span>uint32</span>
+        </code>
+      </td>
+      <td class="content"><p>Numeric identifier value.</p></td>
+      
+    </tr>
+    
+    
+  </tbody>
+</table>
+ 
+      </div>
+      
+    
+      
+      <div class="block">
+        
+
+<h4 class="title is-4 type-heading" id="message-common.v1.UUID">
+  <span>
+    <a href="#message-common.v1.UUID" title="common.v1.UUID">message UUID</a>
+  
+  </span>
+  
+    <a class="type-source-link" href="https://github.com/atilova-garden/embedded.protocols/blob/master/proto/common/v1/base.proto#L14">common/v1/base.proto</a>
+  
+</h4>
+
+<div class="block content">
+  <p>UUID is a 128-bit universally unique identifier stored as raw bytes.</p>
+</div>
+
+<table class="table is-fullwidth is-hoverable is-bordered">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>1</td>
+      <td>
+        value
+      </td>
+      <td>
+        <code title="bytes">
+          
+          <span>bytes</span>
+        </code>
+      </td>
+      <td class="content"><p>Raw 16-byte UUID value.</p></td>
+      
+    </tr>
+    
+    
+  </tbody>
+</table>
+ 
+      </div>
+      
+    
+      
+      <div class="block">
+        
+
+<h4 class="title is-4 type-heading" id="message-common.v1.Timestamp">
+  <span>
+    <a href="#message-common.v1.Timestamp" title="common.v1.Timestamp">message Timestamp</a>
+  
+  </span>
+  
+    <a class="type-source-link" href="https://github.com/atilova-garden/embedded.protocols/blob/master/proto/common/v1/base.proto#L20">common/v1/base.proto</a>
+  
+</h4>
+
+<div class="block content">
+  <p>Timestamp represents a point in time as Unix epoch seconds.</p>
+</div>
+
+<table class="table is-fullwidth is-hoverable is-bordered">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>1</td>
+      <td>
+        seconds
+      </td>
+      <td>
+        <code title="uint64">
+          
+          <span>uint64</span>
+        </code>
+      </td>
+      <td class="content"><p>Seconds elapsed since Unix epoch (1970-01-01T00:00:00Z).</p></td>
+      
+    </tr>
+    
+    
+  </tbody>
+</table>
+ 
+      </div>
+      
+    
+      
+      <div class="block">
+        
+
+<h4 class="title is-4 type-heading" id="message-common.v1.Duration">
+  <span>
+    <a href="#message-common.v1.Duration" title="common.v1.Duration">message Duration</a>
+  
+  </span>
+  
+    <a class="type-source-link" href="https://github.com/atilova-garden/embedded.protocols/blob/master/proto/common/v1/base.proto#L26">common/v1/base.proto</a>
+  
+</h4>
+
+<div class="block content">
+  <p>Duration represents an elapsed time interval measured in seconds.</p>
+</div>
+
+<table class="table is-fullwidth is-hoverable is-bordered">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>1</td>
+      <td>
+        seconds
+      </td>
+      <td>
+        <code title="uint64">
+          
+          <span>uint64</span>
+        </code>
+      </td>
+      <td class="content"><p>Length of the interval in seconds.</p></td>
+      
+    </tr>
+    
+    
+  </tbody>
+</table>
+ 
+      </div>
+      
+    
+      
+      <div class="block">
+        
+
+<h4 class="title is-4 type-heading" id="message-common.v1.ErrorCode">
+  <span>
+    <a href="#message-common.v1.ErrorCode" title="common.v1.ErrorCode">message ErrorCode</a>
+  
+  </span>
+  
+    <a class="type-source-link" href="https://github.com/atilova-garden/embedded.protocols/blob/master/proto/common/v1/base.proto#L32">common/v1/base.proto</a>
+  
+</h4>
+
+<div class="block content">
+  <p>ErrorCode carries a domain-specific error identifier encoded as bytes.</p>
+</div>
+
+<table class="table is-fullwidth is-hoverable is-bordered">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>1</td>
+      <td>
+        code
+      </td>
+      <td>
+        <code title="bytes">
+          
+          <span>bytes</span>
+        </code>
+      </td>
+      <td class="content"><p>Opaque error code bytes defined by the application domain.</p></td>
+      
+    </tr>
+    
+    
+  </tbody>
+</table>
+ 
+      </div>
+      
+    
+
+  
+
+  
+
+</div>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        
+        <p>Built with <strong><a href="https://github.com/markvincze/sabledocs" target="_blank">sabledocs</a></strong>.</p>
+      </div>
+    </footer>
+  </body>
+</html>
