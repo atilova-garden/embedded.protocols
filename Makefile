@@ -1,6 +1,8 @@
-PROTO_DIR := proto
-BUF       := buf
-AGAINST   ?= .git#branch=master
+PROTO_DIR   := proto
+BUF         := buf
+REMOTE_URL  := $(shell git remote get-url origin | sed 's|git@github.com:|https://github.com/|')
+LATEST_TAG  := $(shell git ls-remote --tags --sort=-version:refname origin 'v*' | head -1 | sed 's|.*refs/tags/||')
+AGAINST     ?= $(if $(LATEST_TAG),$(REMOTE_URL)\#tag=$(LATEST_TAG),.git\#branch=master)
 
 .PHONY: lint format build clean breaking ci ci-docs
 
@@ -24,7 +26,7 @@ clean:
 
 breaking:
 	@echo "[breaking] Checking breaking changes against $(AGAINST)..."
-	cd $(PROTO_DIR) && $(BUF) breaking --against '$(AGAINST)'
+	$(BUF) breaking --against '$(AGAINST)'
 
 ci: lint
 

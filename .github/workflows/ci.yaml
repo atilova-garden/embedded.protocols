@@ -47,6 +47,9 @@ jobs:
       - name: Lint & Format
         run: make ci
 
+      # TODO: add breaking change validation against the latest released tag
+      #   run: make breaking
+
       - name: Generate Docs
         run: make ci-docs
 

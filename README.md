@@ -1,6 +1,7 @@
 # embedded.protocols
 
 Shared Protocol Buffer definitions for the embedded garden system.
+- [Documentation](https://atilova-garden.github.io/embedded.protocols/)
 
 ## Required tools
 
