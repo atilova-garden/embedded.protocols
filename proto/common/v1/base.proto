@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+// Package common.v1 provides fundamental scalar types shared across
+// all service definitions.
+package common.v1;
+
+// IntId is a lightweight 32-bit unsigned integer identifier.
+message IntId {
+  // Numeric identifier value.
+  uint32 value = 1;
+}
+
+// UUID is a 128-bit universally unique identifier stored as raw bytes.
+message UUID {
+  // Raw 16-byte UUID value.
+  bytes value = 1;
+}
+
+// Timestamp represents a point in time as Unix epoch seconds.
+message Timestamp {
+  // Seconds elapsed since Unix epoch (1970-01-01T00:00:00Z).
+  uint64 seconds = 1;
+}
+
+// Duration represents an elapsed time interval measured in seconds.
+message Duration {
+  // Length of the interval in seconds.
+  uint64 seconds = 1;
+}
+
+// ErrorCode carries a domain-specific error identifier encoded as bytes.
+message ErrorCode {
+  // Opaque error code bytes defined by the application domain.
+  bytes code = 1;
+}
