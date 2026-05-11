@@ -1,5 +1,6 @@
-PROTO_DIR   := proto
-BUF         := buf
+PROTO_DIR              := proto
+BUF                    := buf
+DOCS_REPOSITORY_BRANCH ?= master
 REMOTE_URL  := $(shell git remote get-url origin | sed 's|git@github.com:|https://github.com/|')
 LATEST_TAG  := $(shell git ls-remote --tags --sort=-version:refname origin 'v*' | head -1 | sed 's|.*refs/tags/||')
 AGAINST     ?= $(if $(LATEST_TAG),$(REMOTE_URL)\#tag=$(LATEST_TAG),.git\#branch=master)
@@ -31,5 +32,6 @@ breaking:
 ci: lint
 
 ci-docs: build
-	@echo "[docs] Generating documentation..."
+	@echo "[docs] Generating documentation (branch: $(DOCS_REPOSITORY_BRANCH))..."
+	sed 's/{{DOCS_REPOSITORY_BRANCH}}/$(DOCS_REPOSITORY_BRANCH)/g' sabledocs.toml.template > sabledocs.toml
 	uv run sabledocs

@@ -36,6 +36,8 @@ jobs:
         run: uv sync
 
       - name: Generate docs
+        env:
+          DOCS_REPOSITORY_BRANCH: ${{ inputs.tag }}
         run: make ci-docs
 
       - name: Configure git identity
