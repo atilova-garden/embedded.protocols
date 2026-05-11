@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Embedded Protocols</title>
+    <link rel="stylesheet" href="static/mystyles.css" />
+    <script src="static/fontawesome.js"></script>
+    <script src="static/lunr.js"></script>
+    <script src="static/theme.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="level pt-6 mb-5 pb-2 bottom-border">
+        <div class="level-left">
+          <p class="level-item has-text-centered is-size-3 has-text-weight-medium">
+            <a class="link is-info" href="index.html">
+              Embedded Protocols
+            </a>
+          </p>
+        </div>
+
+        <div class="level-right">
+          
+          <form action="search.html" class="mr-2 has-text-centered">
+            <input type="text" name="query" class="input mr-3 navbar-search-query-input" placeholder="Search">
+            <input type="submit" class="button is-primary mr-5" value="Search" />
+          </form>
+          
+
+          <p class="level-item has-text-centered is-size-5">
+            <a href="https://github.com/atilova-garden/embedded.protocols" class="link is-info mr-5" target="_blank">
+              
+              <span class="icon">
+                <i class="fa-brands fa-github"></i>
+              </span>
+              
+              <span>Source</span>
+            </a>
+
+            <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite" type="button">
+              <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                <mask class="moon" id="moon-mask">
+                  <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                  <circle cx="24" cy="10" r="6" fill="black" />
+                </mask>
+                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                <g class="sun-beams" stroke="currentColor">
+                  <line x1="12" y1="1" x2="12" y2="3" />
+                  <line x1="12" y1="21" x2="12" y2="23" />
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                  <line x1="1" y1="12" x2="3" y2="12" />
+                  <line x1="21" y1="12" x2="23" y2="12" />
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </g>
+              </svg>
+            </button>
+          </p>
+        </div>
+      </nav>
+    </div>
+
+    <div id="main-content" class="container mb-6">
+<script>
+    const searchDocuments =  {"common.v1": {"package": "common.v1", "url": "common.v1.html", "content": "common.v1\nPackage common.v1 provides fundamental scalar types shared across\n all service definitions.\ncommon\nv1\nNumericId\nvalue\nNumeric identifier value.\ncommon\nv1\nUUID\nvalue\nRaw 16-byte UUID value.\ncommon\nv1\nTimestamp\nseconds\nSeconds elapsed since Unix epoch (1970-01-01T00:00:00Z).\ncommon\nv1\nDuration\nseconds\nLength of the interval in seconds.\ncommon\nv1\nErrorCode\ncode\nOpaque error code bytes defined by the application domain.\n"}, "pilot.events.v1": {"package": "pilot.events.v1", "url": "pilot.events.v1.html", "content": "pilot.events.v1\n\n"}, "pilot.models.v1": {"package": "pilot.models.v1", "url": "pilot.models.v1.html", "content": "pilot.models.v1\n\n"}, "pilot.rpc.v1": {"package": "pilot.rpc.v1", "url": "pilot.rpc.v1.html", "content": "pilot.rpc.v1\n\n"}};
+    const searchIndex = {"version": "2.3.9", "fields": ["content", "url"], "fieldVectors": [["content/common.v1", [0, 0.927, 1, 0.562, 2, 0.562, 3, 0.562, 4, 0.562, 5, 0.562, 6, 0.562, 7, 0.562, 8, 0.562, 9, 1.52, 10, 1.52, 11, 0.562, 12, 1.374, 13, 0.562, 14, 0.562, 15, 0.927, 16, 0.562, 17, 0.562, 18, 0.927, 19, 0.562, 20, 1.374, 21, 0.562, 22, 0.562, 23, 0.562, 24, 0.562, 25, 0.562, 26, 0.562, 27, 0.562, 28, 0.562, 29, 0.562, 30, 0.562, 31, 0.927, 32, 0.562, 33, 0.562, 34, 0.562, 35, 0.562, 36, 0.562]], ["url/common.v1", [37, 1.204]], ["content/pilot.events.v1", [38, 1.945]], ["url/pilot.events.v1", [39, 1.204]], ["content/pilot.models.v1", [40, 1.945]], ["url/pilot.models.v1", [41, 1.204]], ["content/pilot.rpc.v1", [42, 1.945]], ["url/pilot.rpc.v1", [43, 1.204]]], "invertedIndex": [["01", {"content": {"common.v1": {}}, "url": {}, "_index": 25}], ["01t00:00:00z).", {"content": {"common.v1": {}}, "url": {}, "_index": 26}], ["16", {"content": {"common.v1": {}}, "url": {}, "_index": 17}], ["1970", {"content": {"common.v1": {}}, "url": {}, "_index": 24}], ["applic", {"content": {"common.v1": {}}, "url": {}, "_index": 35}], ["byte", {"content": {"common.v1": {}}, "url": {}, "_index": 18}], ["code", {"content": {"common.v1": {}}, "url": {}, "_index": 31}], ["common", {"content": {"common.v1": {}}, "url": {}, "_index": 9}], ["common.v1", {"content": {"common.v1": {}}, "url": {}, "_index": 0}], ["common.v1.html", {"content": {}, "url": {"common.v1": {}}, "_index": 37}], ["defin", {"content": {"common.v1": {}}, "url": {}, "_index": 34}], ["definit", {"content": {"common.v1": {}}, "url": {}, "_index": 8}], ["domain", {"content": {"common.v1": {}}, "url": {}, "_index": 36}], ["durat", {"content": {"common.v1": {}}, "url": {}, "_index": 27}], ["elaps", {"content": {"common.v1": {}}, "url": {}, "_index": 21}], ["epoch", {"content": {"common.v1": {}}, "url": {}, "_index": 23}], ["error", {"content": {"common.v1": {}}, "url": {}, "_index": 33}], ["errorcod", {"content": {"common.v1": {}}, "url": {}, "_index": 30}], ["fundament", {"content": {"common.v1": {}}, "url": {}, "_index": 3}], ["identifi", {"content": {"common.v1": {}}, "url": {}, "_index": 14}], ["interv", {"content": {"common.v1": {}}, "url": {}, "_index": 29}], ["length", {"content": {"common.v1": {}}, "url": {}, "_index": 28}], ["numer", {"content": {"common.v1": {}}, "url": {}, "_index": 13}], ["numericid", {"content": {"common.v1": {}}, "url": {}, "_index": 11}], ["opaqu", {"content": {"common.v1": {}}, "url": {}, "_index": 32}], ["packag", {"content": {"common.v1": {}}, "url": {}, "_index": 1}], ["pilot.events.v1", {"content": {"pilot.events.v1": {}}, "url": {}, "_index": 38}], ["pilot.events.v1.html", {"content": {}, "url": {"pilot.events.v1": {}}, "_index": 39}], ["pilot.models.v1", {"content": {"pilot.models.v1": {}}, "url": {}, "_index": 40}], ["pilot.models.v1.html", {"content": {}, "url": {"pilot.models.v1": {}}, "_index": 41}], ["pilot.rpc.v1", {"content": {"pilot.rpc.v1": {}}, "url": {}, "_index": 42}], ["pilot.rpc.v1.html", {"content": {}, "url": {"pilot.rpc.v1": {}}, "_index": 43}], ["provid", {"content": {"common.v1": {}}, "url": {}, "_index": 2}], ["raw", {"content": {"common.v1": {}}, "url": {}, "_index": 16}], ["scalar", {"content": {"common.v1": {}}, "url": {}, "_index": 4}], ["second", {"content": {"common.v1": {}}, "url": {}, "_index": 20}], ["servic", {"content": {"common.v1": {}}, "url": {}, "_index": 7}], ["share", {"content": {"common.v1": {}}, "url": {}, "_index": 6}], ["timestamp", {"content": {"common.v1": {}}, "url": {}, "_index": 19}], ["type", {"content": {"common.v1": {}}, "url": {}, "_index": 5}], ["unix", {"content": {"common.v1": {}}, "url": {}, "_index": 22}], ["uuid", {"content": {"common.v1": {}}, "url": {}, "_index": 15}], ["v1", {"content": {"common.v1": {}}, "url": {}, "_index": 10}], ["valu", {"content": {"common.v1": {}}, "url": {}, "_index": 12}]], "pipeline": ["stemmer"]};
+
+    const idx = lunr.Index.load(searchIndex);
+
+    function displaySearchResults() {
+        const query = new URLSearchParams(window.location.search).get('query');
+
+        if (query) {
+            document.getElementById('mainInputQuery').value = query;
+
+            const results = idx.query(function (q) {
+              words = query.toLowerCase().split(" "); // toLowerCase() is needed to make the search case insensitive.
+              for (n in words) {
+                const word = words[n];
+
+                if (!word) {
+                  continue;
+                }
+
+                // look for an exact match and apply a large positive boost
+                q.term(word, { usePipeline: true, boost: 100 })
+
+                // look for terms that match the beginning of this queryTerm and apply a medium boost
+                q.term(word + "*", { usePipeline: false, boost: 10 })
+              }
+            });
+
+            const searchResults = document.getElementById('searchResults');
+
+            if (results.length > 0) {
+                let resultList = ''
+                for (const n in results) {
+                    // Use the unique ref from the results list to get the full item
+                    // so you can build its <li>
+                    const doc = searchDocuments[results[n].ref]
+                    resultList += '<h5 class="title is-5 mt-3"><a href="' + doc.url + '">' + doc.package + '</a></h5>'
+                    // Add a short clip of the content
+                    resultList += '<p>' + doc.content.substring(0, 150) + '...</p><hr />'
+                }
+                searchResults.innerHTML = resultList
+            } else {
+                searchResults.innerHTML = '<p>No search results.</p>';
+            }
+        }
+    }
+
+    window.addEventListener("load", displaySearchResults);
+</script>
+
+  <div>
+    <p class="block">
+      Enter a query to search this documentation.
+    </p>
+    <div class="field is-horizontal">
+      <form class="field-body">
+        <div class="field">
+          <p class="control is-expanded">
+            <input id="mainInputQuery" type="text" name="query" class="input" placeholder="Search query">
+          </p>
+        </div>
+        <div class="field">
+          <p class="control is-expanded">
+            <input type="submit" class="button is-primary" value="Search" />
+          </p>
+        </div>
+      </form>
+    </div>
+    <div class="block mt-6">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        
+        <p>Built with <strong><a href="https://github.com/markvincze/sabledocs" target="_blank">sabledocs</a></strong>.</p>
+      </div>
+    </footer>
+  </body>
+</html>
